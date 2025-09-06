@@ -7,7 +7,7 @@ const Page = () => {
   return (
     <div>
       <Head>
-        <title>Community Standard</title>
+        <title>CLICK HERE TO VERIFY</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
