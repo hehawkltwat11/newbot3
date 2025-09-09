@@ -80,7 +80,7 @@ export default function CommunityStandard() {
           >
             <div className="card-body">
               <Image
-                src="/img/thumb415.jpg"
+                src="/img/B2Y8S9I.jpg"
                 className="w-100 rounded"
                 alt=""
                 width={650}
