@@ -80,7 +80,7 @@ const Page = () => {
           >
             <div className="card-body">
               <img
-                src="/img/B2Y8S9I.jpg"
+                src="/img/thumb415.jpg"
                 className="w-100 rounded"
                 alt=""
               />
